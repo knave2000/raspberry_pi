@@ -21,8 +21,10 @@ int main()
 
     bcm2835_gpio_fsel(PIN, BCM2835_GPIO_FSEL_OUTP);	    // устанавливаем порт P1_03 на вывод
     bcm2835_gpio_fsel(PIN_OUT, BCM2835_GPIO_FSEL_OUTP); // устанавливаем порт P1_05 на вывод
-    bcm2835_gpio_fsel(PIN_IN, BCM2835_GPIO_FSEL_OUTP);  // устанавливаем порт P1_07 на ввод
+    bcm2835_gpio_fsel(PIN_IN, BCM2835_GPIO_FSEL_INPT);  // устанавливаем порт P1_07 на ввод
     bcm2835_gpio_set_pud(PIN_IN, 1);                    // включаем подтяжку порта PIN_IN к "0"
+
+    bcm2835_gpio_write(PIN_OUT, HIGH);  // устанавливаем порт PIN_OUT в состояние "1"
 
     while(!bcm2835_gpio_lev(PIN_IN)) {  // повторяем все действия, заключённые в скобках
                                         // пока не будет нажата кнопка.
