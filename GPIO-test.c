@@ -5,8 +5,8 @@
 
 #include <bcm2835.h>
 
-#define PIN RPI_GPIO_P1_03	// для RPi ревизии v1
-//#define PIN RPI_V2_GPIO_P1_03	// для RPi ревизии v2
+//#define PIN RPI_GPIO_P1_03	// для RPi ревизии v1
+#define PIN RPI_V2_GPIO_P1_03	// для RPi ревизии v2
 
 int main()
 {
